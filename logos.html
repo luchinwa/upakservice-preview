@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Упаксервис — логотипы</title>
+<meta name="description" content="Варианты логотипа Упаксервис">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;500;600;700&family=Rubik:wght@500;600;700&display=swap">
+<style>
+:root{--f-site:"Manrope",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;--f-disp:"Unbounded","Manrope",system-ui,Arial,sans-serif}
+html,body{margin:0}
+body{background:#fff}
+img{max-width:100%}
+
+:root{--bg:#F2F4F8;--panel:#fff;--fg:#0F1A2C;--muted:#5E6B7E;--line:#DDE3EC;--navy:#0B1C38;--red:#E1312C}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-site);line-height:1.5}
+.wrap{max-width:1240px;margin:0 auto;padding:40px 16px 64px;display:grid;gap:28px}
+.top{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+h1{font-family:var(--f-disp);font-weight:600;letter-spacing:-.02em;font-size:clamp(24px,4vw,34px);margin:0}
+.back{color:var(--navy);font-weight:700;text-decoration:none;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-size:14px}
+.logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr));gap:16px}
+.lcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid}
+.lcard header{padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.lcard header b{font-size:16px}
+.lcard header span{font-family:var(--f-disp);font-size:13px;color:var(--red);font-weight:600}
+.stage{display:flex;align-items:center;justify-content:center;min-height:120px;padding:18px}
+.stage.light{background:#fff;border-top:1px solid var(--line)}
+.stage.dark{background:var(--navy)}
+.stage svg{width:100%;max-width:300px;height:auto}
+.foot{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:14px 18px 18px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
+.foot .ic{display:grid;justify-items:center;gap:4px}
+.foot svg{display:block}
+.foot .try{margin-left:auto;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:13px;border-radius:999px;padding:8px 14px}
+.foot .try:focus-visible,.back:focus-visible{outline:2px solid #1D4FA8;outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><h1>Логотип Упаксервис</h1><a class="back" href="index.html">← Главная</a></div>
+<div class="logos" id="logos"></div>
+</div>
+<script>
+(function(){
+const C={blue:'#1D4FA8',navy:'#0D1F3F',red:'#E1312C',sky:'#5BA8E8',white:'#FFFFFF'};
+
+/* ---- знаки (64×64) ---- */
+const MARK={
+  A:(d)=>`<circle cx="24" cy="28" r="21" fill="${C.blue}"/>
+    <circle cx="24" cy="28" r="14" fill="none" stroke="${C.white}" stroke-opacity=".18" stroke-width="2"/>
+    <circle cx="24" cy="28" r="7.5" fill="${d?C.navy:C.white}"/>
+    <circle cx="24" cy="28" r="3.2" fill="${C.red}"/>
+    <path d="M24 43H62V49H24Z" fill="${C.sky}"/><path d="M24 43H62V44.6H24Z" fill="#fff" fill-opacity=".45"/>`,
+  B:(d)=>`<polygon points="7.6,13.3 16.4,6.7 39.4,36.7 30.6,43.3" fill="${C.blue}"/>
+    <polygon points="45.2,5.4 54.8,10.6 28.8,58.6 25,59.9 24,56 20.2,57.3 19.2,53.4" fill="${C.red}" stroke="${d?C.navy:C.white}" stroke-width="2.4" paint-order="stroke" stroke-linejoin="round"/>`,
+  C:(d)=>`<rect x="5" y="5" width="54" height="50" rx="11" fill="${C.blue}"/>
+    <path d="M5 20H59" stroke="#fff" stroke-opacity=".22" stroke-width="2"/>
+    <path d="M26 5H38V58L35 61 32 58 29 61 26 58Z" fill="${C.red}"/>
+    <path d="M26 5H38V7.5H26Z" fill="#fff" fill-opacity=".3"/>`,
+  D:(d)=>`<path d="M11 6h13v11q8 7 16 0V6h13v50a5 5 0 0 1-5 5H16a5 5 0 0 1-5-5Z" fill="${C.blue}"/>
+    <path d="M11 6h13v11q-7 0-13 4Z M53 6H40v11q7 0 13 4Z" fill="${C.sky}"/>
+    <path d="M11 50H53V56a5 5 0 0 1-5 5H16a5 5 0 0 1-5-5Z" fill="${C.red}"/>
+    <text x="32" y="44" text-anchor="middle" font-family="Manrope,Arial" font-weight="800" font-size="21" fill="#fff">У</text>`,
+  E:(d)=>`<path d="M6 35C9 16 42 7 59 21" fill="none" stroke="${C.red}" stroke-width="9" stroke-linecap="round"/>
+    <path d="M58 30C55 48 22 57 5 43" fill="none" stroke="${C.blue}" stroke-width="9" stroke-linecap="round"/>
+    <text x="32" y="39" text-anchor="middle" font-family="Manrope,Arial" font-weight="800" font-size="16" letter-spacing="-.5" fill="${d?C.white:C.navy}">УС</text>`,
+  F:(d)=>`<rect x="9" y="5" width="46" height="43" rx="6" fill="${C.blue}"/>
+    <path d="M9 17 55 9V16L9 24Z M9 30 55 22V29L9 37Z M9 43 55 35V42L9 48Z" fill="#fff" fill-opacity=".28"/>
+    <rect x="5" y="50" width="54" height="5" rx="1.5" fill="${C.red}"/>
+    <rect x="9" y="55" width="7" height="5" fill="${C.red}"/><rect x="28.5" y="55" width="7" height="5" fill="${C.red}"/><rect x="48" y="55" width="7" height="5" fill="${C.red}"/>`
+};
+/* ---- надписи ---- */
+function word(v,d){
+  const ink=d?C.white:C.navy, sub=d?'#9FB3D1':'#5E6B7E';
+  if(v==='A') return `<text x="60" y="32" font-family="Unbounded,Manrope,Arial" font-weight="600" font-size="22.5" letter-spacing="-.4"><tspan fill="${ink}">упак</tspan><tspan fill="${C.red}">сервис</tspan></text>`;
+  if(v==='B') return `<text x="66" y="31" font-family="Manrope,Arial" font-weight="800" font-size="27" letter-spacing="-.6" fill="${ink}">Упаксервис</text>
+     <text x="67" y="49" font-family="Manrope,Arial" font-weight="600" font-size="9.6" letter-spacing="2.2" fill="${sub}">УПАКОВОЧНЫЕ МАТЕРИАЛЫ</text>`;
+  if(v==='D') return `<text x="66" y="31" font-family="Rubik,Arial" font-weight="700" font-size="26" letter-spacing="-.3" fill="${ink}">Упаксервис</text>
+     <text x="67" y="49" font-family="Rubik,Arial" font-weight="500" font-size="10.5" letter-spacing=".6" fill="${sub}">пакеты · плёнки · скотч</text>`;
+  if(v==='E') return `<text x="68" y="31" font-family="Manrope,Arial" font-weight="800" font-size="27" letter-spacing="-.6"><tspan fill="${d?C.white:C.blue}">Упак</tspan><tspan fill="${C.red}">сервис</tspan></text>
+     <text x="69" y="49" font-family="Manrope,Arial" font-weight="600" font-size="9.6" letter-spacing="2.4" fill="${sub}">УПАКОВКА И СЕРВИС</text>`;
+  if(v==='F') return `<text x="68" y="30" font-family="Unbounded,Manrope,Arial" font-weight="500" font-size="20.5" letter-spacing="-.3" fill="${ink}">упаксервис</text>
+     <text x="69" y="49" font-family="Manrope,Arial" font-weight="600" font-size="10" letter-spacing="1.2" fill="${sub}">склад упаковки · Хабаровск</text>`;
+  return `<text x="72" y="30" font-family="Rubik,Arial" font-weight="700" font-size="24" letter-spacing="1.2" fill="${ink}">УПАКСЕРВИС</text>
+     <text x="73" y="49" font-family="Rubik,Arial" font-weight="500" font-size="10.5" letter-spacing="1.1" fill="${sub}">упаковка оптом · Хабаровск</text>`;
+}
+function lockup(v,d){
+  /* у варианта A плёнка с рулона продолжается под словом */
+  const film = v==='A' ? `<path d="M24 43H292V49H24Z" fill="${C.sky}"/><path d="M24 43H292V44.6H24Z" fill="#fff" fill-opacity=".45"/>` : '';
+  const mark = v==='A' ? MARK.A(d).replace(/<path[^>]*\/>/g,'') : MARK[v](d);
+  return `<svg class="lockup" viewBox="0 0 300 64" role="img" aria-label="Упаксервис">${film}<g>${mark}</g>${word(v,d)}</svg>`;
+}
+const icon=(v,s,d=0)=>`<svg width="${s}" height="${s}" viewBox="0 0 64 64" aria-hidden="true">${MARK[v](d)}</svg>`;
+
+const VARS=[
+  {k:'A',name:'Рулон плёнки',why:'Плёнка сходит с рулона и подчёркивает название. Главный товар магазина прямо в знаке, шрифт современный и округлый.'},
+  {k:'B',name:'Лента «У»',why:'Буква «У» сложена из двух полос, красная заканчивается зубчатым краем, как оторванный скотч. Самый простой знак, читается даже в 16 px.'},
+  {k:'C',name:'Заклеенный короб',why:'Коробка, заклеенная красной лентой, и строгое название заглавными. Солидный «складской» вариант для опта.'},
+  {k:'D',name:'Пакет-майка',why:'Узнаваемый силуэт пакета с буквой «У» и красным дном. Сразу понятно, что продают пакеты, хорошо смотрится на самих пакетах.'},
+  {k:'E',name:'Обновлённая волна',why:'Ваш нынешний знак, но чище: две дуги, красная и синяя, вокруг «УС». Постоянные клиенты узнают его сразу.'},
+  {k:'F',name:'Паллета в стрейче',why:'Груз на паллете, обмотанный стрейч-плёнкой. Про опт, склад и большие объёмы.'}
+];
+let cur='A';
+document.getElementById('logos').innerHTML=VARS.map(v=>`<article class="lcard">
+<header><b>${v.name}</b><span>${v.k}</span></header>
+<div class="stage light">${lockup(v.k,0)}</div>
+<div class="stage dark">${lockup(v.k,1)}</div>
+<div class="foot"><div class="ic">${icon(v.k,48)}48</div><div class="ic">${icon(v.k,32)}32</div><div class="ic">${icon(v.k,16)}16</div><a class="try" href="index.html#${v.k}">На сайте</a></div>
+</article>`).join('');
+})();
+</script>
+</body>
+</html>
